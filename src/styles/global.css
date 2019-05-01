@@ -1,0 +1,4 @@
+/* Overriding PrismJS Theme for Syntax Highlighting */
+.token.parameter {
+	color: #6196cc;
+}
