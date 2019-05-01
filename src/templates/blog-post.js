@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 // We are going to pass in data that would be a blog post
 
 const Template = ({ data }) => {
-    console.log(data)
+    // console.log(data)
     const post = data.markdownRemark
 
     return (

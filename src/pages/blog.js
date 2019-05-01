@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby';
 import { node } from 'prop-types';
 import Layout from '../components/layout'
 
+// This page is iterating over the blogs info and just displaying only a part of the information.
 const BlogPage = ({ data }) => (
     <Layout>
         <div>
