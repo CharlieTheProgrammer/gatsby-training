@@ -2,3 +2,19 @@
 .token.parameter {
 	color: #6196cc;
 }
+
+html, body, #___gatsby {
+    height: 100%
+}
+
+/* React Router Adds An extra div, which appears right underneat the 'App' div. */
+/* This CSS targets the direct descendant, of which there is only one. */
+#___gatsby > * {
+    height: 100%;
+  }
+
+/* Font Family used for syntax highlight is different from the rest of the site, which
+  also means that the sizing is off. It's too large by default so I'm making it smaller here. */
+.gatsby-highlight {
+	font-size: 85%;
+}

@@ -10,11 +10,13 @@ const Template = ({ data }) => {
 
     return (
         <Layout>
-            <div>
+            <div className="mx-auto" style={{
+                maxWidth: 700,
+            }}>
                 <Link to="/blog">Go Back</Link>
-                <hr />
+                < hr />
                 <h1>{post.frontmatter.title}</h1>
-                <h4>Posted by {post.frontmatter.author} on {post.frontmatter.date}</h4>
+                <p className="font-weight-light">Posted by {post.frontmatter.author} on {post.frontmatter.date}</p>
                 <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
             </div>
         </Layout>

@@ -10,8 +10,8 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import Menu from "./menu"
-import "./layout.css"
+//import "./layout.css"
+import 'bootstrap/dist/css/bootstrap.css';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -25,25 +25,21 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <div className="d-none wrapper d-flex flex-column h-100">
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Menu></Menu>
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
-      </>
+        <main className="container mt-2" style={{
+          flex: '1 0 auto'
+        }}>{children}</main>
+        <footer className="text-center bg-light pt-3">
+          <div className="text-center py-1">
+            <a href="https://twitter.com"><i className="fab mx-2 fa-twitter-square fa-2x social"></i></a>
+            <a href="https://linkedin.com"><i className="fab mx-2 fa-linkedin fa-2x social"></i></a>
+            <a href="mailto:dev@charlietheprogrammer.com"><i className="fa mx-2 fa-envelope-square fa-2x social"></i></a>
+            <a href="https://github.com"><i className="fab mx-2 fa-github-square fa-2x social"></i></a>
+          </div>
+          © {new Date().getFullYear()} Charlie The Programmer
+        </footer>
+      </div>
     )}
   />
 )
