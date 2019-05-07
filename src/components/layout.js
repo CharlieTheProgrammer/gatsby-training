@@ -8,6 +8,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import { faLinkedin, faTwitterSquare, faGithubSquare } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Header from "./header"
 //import "./layout.css"
@@ -32,10 +35,10 @@ const Layout = ({ children }) => (
         }}>{children}</main>
         <footer className="text-center bg-light pt-3">
           <div className="text-center py-1">
-            <a href="https://twitter.com"><i className="fab mx-2 fa-twitter-square fa-2x social"></i></a>
-            <a href="https://linkedin.com"><i className="fab mx-2 fa-linkedin fa-2x social"></i></a>
-            <a href="mailto:dev@charlietheprogrammer.com"><i className="fa mx-2 fa-envelope-square fa-2x social"></i></a>
-            <a href="https://github.com"><i className="fab mx-2 fa-github-square fa-2x social"></i></a>
+            <a href="https://twitter.com/WebDevCharlieO"><FontAwesomeIcon icon={faTwitterSquare} size="2x" className="mx-2" /></a>
+            <a href="https://linkedin.com/in/charlie-ontiveros/"><FontAwesomeIcon icon={faLinkedin} size="2x" className="mx-2" /></a>
+            <a href="mailto:dev@charlietheprogrammer.com"><FontAwesomeIcon icon={faEnvelopeSquare} size="2x" className="mx-2" /></a>
+            <a href="https://github.com/CharlieTheProgrammer"><FontAwesomeIcon icon={faGithubSquare} size="2x" className="mx-2" /></a>
           </div>
           © {new Date().getFullYear()} Charlie The Programmer
         </footer>
