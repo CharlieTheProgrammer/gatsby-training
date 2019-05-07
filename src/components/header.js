@@ -1,8 +1,7 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-import { Nav, Navbar, NavbarBrand, NavDropdown } from 'react-bootstrap';
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 const Header = ({ siteTitle }) => (
   <Navbar className="bg-light mb-2" collapseOnSelect expand="md">
