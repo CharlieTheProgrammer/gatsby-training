@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby';
-import { node } from 'prop-types';
 import Layout from '../components/layout'
 
 // This page is iterating over the blogs info and just displaying only a part of the information.
@@ -12,10 +11,9 @@ const BlogPage = ({ data }) => (
                 <div key={post.node.id}>
                     <hr />
                     <h3>{post.node.frontmatter.title}</h3>
-                    <small>Posted by {post.node.frontmatter.author} on {post.node.frontmatter.date}</small>
+                    <p>Posted by {post.node.frontmatter.author} on {post.node.frontmatter.date}</p>
+                    <small className="d-block">SEO Keywords: {post.node.frontmatter.seoKeywords}</small>
                     <br />
-                    <br />
-                    <p>{post.node.frontmatter.description}</p>
                     <Link to={post.node.frontmatter.path}>Read More</Link>
                     <br />
                     <br />
@@ -29,20 +27,23 @@ const BlogPage = ({ data }) => (
 // that this may not be using gatsby-node.
 export const pageQuery = graphql`
     query BlogIndexQuery {
-        allMarkdownRemark {
-            edges {
-              node {
-                id
-                frontmatter {
-                  title
-                  path
-                  date
-                  author
-                  description
+        allMarkdownRemark (sort: {
+            fields: [frontmatter___date],
+            order: DESC
+          }) {
+              edges {
+                node {
+                  id
+                  frontmatter {
+                    title
+                    path
+                    date
+                    author
+                    seoKeywords
+                  }
                 }
               }
-            }
-        }
+          }
     }
 `
 
