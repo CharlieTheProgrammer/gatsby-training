@@ -1,22 +1,19 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-
+import { Link } from 'gatsby'
 
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Home" keywords={[`Charlie Ontiveros`, `full stack application blog`]} />
     <div className="d-flex flex-column justify-content-center align-items-center text-center h-100">
       <p className="d-none d-sm-block">Welcome to my site, I'm happy to see you here...</p>
-      <h1 className="d-none d-sm-block display-4 text-uppercase text-center">I'm Charlie Ontiveros</h1>
-      <h1 className="d-block d-sm-none d-none-lg d-none-xl h1 font-weight-light text-uppercase text-center">I'm <br/> Charlie <br/> Ontiveros</h1>
-      <p className="lead text-center">I Solve Business Problems with Technical Solutions </p>
-      <button className="btn btn-outline-primary">Download CV</button>
-      <Image />
+      <h1 className="d-none d-sm-block display-4  text-center">I'm Charlie Ontiveros</h1>
+      <h1 className="d-block d-sm-none d-none-lg d-none-xl h1 font-weight-light  text-center">I'm <br/> Charlie <br/> Ontiveros</h1>
+      <p className="lead text-center font-weight-bold">I Solve Business Problems with Technical Solutions </p>
+      <p className="w-50">I'm a full stack web developer based in the Sacramento area, specialized in building high-quality NodeJs, Express, SQL, and VueJs applications.</p>
+      <Link className="btn btn-outline-primary" to="/portfolio">Check Out My Projects</Link>
     </div>
   </Layout>
 )
