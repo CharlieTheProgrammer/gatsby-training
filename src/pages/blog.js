@@ -10,10 +10,10 @@ const BlogPage = ({ data }) => (
             {data.allMarkdownRemark.edges.map(post => (
                 <div key={post.node.id}>
                     <hr />
-                    <h3>{post.node.frontmatter.title}</h3>
+                    <h3><Link className="text-dark" to={post.node.frontmatter.path}>{post.node.frontmatter.title}</Link></h3>
                     <p>Posted by {post.node.frontmatter.author} on {post.node.frontmatter.date}</p>
-                    <small className="d-block">SEO Keywords: {post.node.frontmatter.seoKeywords}</small>
-                    <br />
+                    {/* <small className="d-block">SEO Keywords: {post.node.frontmatter.seoKeywords}</small> */}
+
                     <Link to={post.node.frontmatter.path}>Read More</Link>
                     <br />
                     <br />

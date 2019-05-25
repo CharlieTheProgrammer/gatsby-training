@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 // We are going to pass in data that would be a blog post
 
@@ -10,6 +11,10 @@ const Template = ({ data }) => {
 
     return (
         <Layout>
+            <SEO
+                keywords={post.frontmatter.seoKeywords.split(',')}
+                title={post.frontmatter.title}
+            ></SEO>
             <div className="mx-auto" style={{
                 maxWidth: 700,
             }}>
@@ -32,6 +37,7 @@ export const query = graphql`
                 title
                 author
                 date
+                seoKeywords
             }
         }
     }
