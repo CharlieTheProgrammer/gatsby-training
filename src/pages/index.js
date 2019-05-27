@@ -12,7 +12,7 @@ const IndexPage = () => (
       <h1 className="d-none d-sm-block display-4  text-center">I'm Charlie Ontiveros</h1>
       <h1 className="d-block d-sm-none d-none-lg d-none-xl h1 font-weight-light  text-center">I'm <br/> Charlie <br/> Ontiveros</h1>
       <p className="lead text-center font-weight-bold">I Solve Business Problems with Technical Solutions </p>
-      <p className="w-50">I'm a full stack web developer based in the Sacramento area, specialized in building high-quality NodeJs, Express, SQL, and VueJs applications.</p>
+      <p className="w-50">I'm a web application developer based in the Sacramento area, specialized in building high-quality NodeJs, Express, and SQL applications.</p>
       <Link className="btn btn-outline-primary" to="/portfolio">Check Out My Projects</Link>
     </div>
   </Layout>

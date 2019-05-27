@@ -36,7 +36,7 @@ const Portfolio = () => {
                             <li>ExpressJs</li>
                         </ul>
 
-                        <p><a className="" href="/">Project Details</a></p>
+                        <p><a className="d-none" href="/">Project Details</a></p>
                         <p><a href="https://documenter.getpostman.com/view/3379028/S17xr5ZJ" target="_blank" rel="noopener noreferrer">Postman API Docs</a></p>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ const Portfolio = () => {
                             <li>ExpressJs</li>
                         </ul>
 
-                        <a className="" href="/">Project Details</a>
+                        <a className="d-none" href="/">Project Details</a>
                     </div>
                 </div>
             </section>
@@ -84,7 +84,7 @@ const Portfolio = () => {
                             <li>Netlify</li>
                         </ul>
 
-                        <a className="" href="/">Project Details</a>
+                        <a className="d-none" href="/">Project Details</a>
                     </div>
                 </div>
             </section>
