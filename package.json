@@ -33,6 +33,7 @@
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
     "typography-theme-bootstrap": "^0.16.19",
+    "typography-theme-fairy-gates": "^0.16.19",
     "typography-theme-judah": "^0.16.19"
   },
   "devDependencies": {
