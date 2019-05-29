@@ -2,7 +2,6 @@ import Typography from 'typography'
 // import theme from 'typography-theme-judah'
 import theme from 'typography-theme-fairy-gates'
 theme.baseFontSize = '17px'
-
 theme.overrideThemeStyles = ({ rhythm }, options) => ({
     'a': {
       textShadow: "none",
@@ -16,7 +15,6 @@ theme.overrideThemeStyles = ({ rhythm }, options) => ({
       marginBottom: `${rhythm(0.5)} !important`,
     }
   })
-// console.log(theme)
 
 const typography = new Typography(theme)
 
