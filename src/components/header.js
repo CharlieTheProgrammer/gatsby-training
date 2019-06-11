@@ -12,6 +12,7 @@ const Header = ({ siteTitle, location }) => (
         <Nav.Link href="/" active={location.pathname === '/'}>Home</Nav.Link>
         <Nav.Link href="/about" active={location.pathname === '/about'}>About</Nav.Link>
         <Nav.Link href="/portfolio" active={location.pathname === '/portfolio'}>Portfolio</Nav.Link>
+        <Nav.Link href="/presentations" active={location.pathname === '/presentations'}>Presentations</Nav.Link>
         <Nav.Link href="/blog" active={location.pathname === '/blog'}>Blog</Nav.Link>
         <NavDropdown.Divider />
         <a className="nav-link" href="https://storage.googleapis.com/charlie-o-resume/Charlie%20Ontiveros%20Resume%202019.pdf"  target="_blank" rel="noopener noreferrer" download>Resume</a>
